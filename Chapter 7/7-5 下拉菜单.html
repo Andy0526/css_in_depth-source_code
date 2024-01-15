@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下拉菜单</title>
+    <style>
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 1em auto;
+        }
+
+        /* 创建包含块 */
+        .dropdown {
+            /* inline-block 自适应宽度 */
+            display: inline-block;
+            position: relative;
+        }
+
+        .dropdown-label {
+            /* padding: .5em 1.5em; */
+            /* 增加右侧内边距，给箭头留出空间 */
+            padding: .5em 2em .5em 1.5em;
+            border: 1px solid #ccc;
+            background-color: #eee;
+            border-radius: .2em;
+        }
+
+        .dropdown-label::after{
+            content: " ";
+            /* 在标签的右边定位元素 */
+            position: absolute;
+            right: 1em;
+            top: 1em;
+            border: .3em solid;
+            /* 用上边框做一个向下的箭头 */
+            border-color: black transparent transparent;
+        }
+
+
+        /* 鼠标悬停时，让箭头向上 */
+        .dropdown:hover .dropdown-label::after {
+            top: 0.7em;
+            border-color: transparent transparent black;
+        }
+        
+
+        .dropdown-menu {
+            /* 最初隐藏 */
+            display: none;
+            position: absolute;
+            /* 将菜单移动到下拉菜单下面 */
+            left: 0;
+            top: 2.1em;
+            /* 保证与容器宽度相等 */
+            min-width: 100%;
+            background-color: #eee;
+        }
+
+        
+
+        /* 使用js实现 */
+        /* .dropdown:hover .dropdown-menu {
+            display: block;
+        } */
+
+        .submenu {
+            padding-left: 0;
+            margin: 0;
+            list-style-type: none;
+            border: 1px solid #999;
+        }
+
+        .submenu>li+li {
+            border: 1px solid #999;
+        }
+
+        .submenu>li>a {
+            display: block;
+            padding: .5em 1.5em;
+            background-color: #eee;
+            color: #369;
+            text-decoration: none;
+        }
+
+        .submenu>li>a:hover {
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="dropdown">
+                <div class="dropdown-label">Main Menu</div>
+                <div class="dropdown-menu">
+                    <div class="submenu">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/">Coffee</a></li>
+                        <li><a href="/">Brewers</a></li>
+                        <li><a href="/">Specials</a></li>
+                        <li><a href="/">About us</a></li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <h1>Wombat Coffee Roasters</h1>
+    </div>
+    <script type="text/javascript">
+        var dropdown = document.querySelector('.dropdown');
+        var dropdownMenu = document.querySelector('.dropdown-menu');
+        dropdown.addEventListener('mouseover', function (e) {
+            dropdownMenu.style.display = 'block';
+        });
+        dropdown.addEventListener('mouseleave', function (e) {
+            dropdownMenu.style.display = 'none';
+        })
+    </script>
+</body>
+
+</html>
