@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text-center {
+            text-align: center;
+        }
+
+        .float-left {
+            float: left;
+        }
+
+        .clearfix::before,
+        .clearfix::after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix::after {
+            clear: both
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container text-center">
+        <p>
+            Strength training is an important part of injury prevention. Focus on your core&mdash; especially your
+            abs and glutes.
+        </p>
+        <div class="clearfix" style="background-color: #eee;">
+            <div class="float-left" style="width: 100px; height: 100px; background-color: black;"></div>
+            <div class="float-left" style="width: 100px; height: 100px; background-color: black;"></div>
+        </div>
+        <div class="hidden" style="width: 100px; height: 100px; background-color: greenyellow;"></div>
+    </div>
+    </div>
+</body>
+
+</html>

@@ -21,9 +21,11 @@
             border-radius: 0.2em;
         }
 
+
         .top-banner {
             padding: 1em 0;
             background-color: #fff698;
+            text-align: center;
         }
 
         .top-banner-inner {
@@ -32,12 +34,21 @@
             margin: 0 auto;
         }
 
+        @media (max-width: 35em) {
+            #open {
+                display: block;
+                margin: 1em auto;
+            }
+        }
+
+
         .modal {
             display: none;
         }
 
         /* 模态框打开时，用半透明蒙层遮挡网页剩余内容 */
-        .modal-backdrop {
+        /* 其实直接对.modal进行下面的设置也是可以的 */
+        .modal {
             position: fixed;
             top: 0;
             right: 0;

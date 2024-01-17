@@ -1,0 +1,15 @@
+/* 基础样式应该是通用的，只添加那些影响页面上大部分或者全部内容的样式。 */
+
+:root {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}

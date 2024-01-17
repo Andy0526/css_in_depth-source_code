@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=基础样式.css">
+    <style>
+        /* 9-3 实现消息模块 */
+        .message {
+            padding: 0.8em 1.2em;
+            border-radius: 0.2em;
+            border: 1px solid #265559;
+            color: #265559;
+            background-color: e0f0f2;
+        }
+
+        /* 9-3 实现消息模块 */
+
+        /* 9-4 带修饰符类名的消息模块 */
+        .message--success {
+            color: #2f5926;
+            border-color: #2f5926;
+            background-color: #cfe8c9;
+        }
+
+        .message--warning {
+            color: #594826;
+            border-color: #594826;
+            background-color: #e8dec9;
+        }
+
+        .message--error {
+            color: #59262f;
+            border-color: #59262f;
+            background-color: #e8c9cf;
+        }
+
+        /* 9-4 带修饰符类名的消息模块 */
+
+        /* 9-6 按钮模块和修饰符 */
+        .button {
+            padding: 0.5em 0.8em;
+            border: 1px solid #265559;
+            border-radius: 0.2em;
+            background-color: transparent;
+            font-size: 1rem;
+        }
+
+        .button--success {
+            border-color: #cfe8c9;
+            color: #fff;
+            background-color: #2f5926;
+        }
+
+        .button--danger {
+            border-color: #e8c9c9;
+            color: #fff;
+            background-color: #a92323;
+        }
+
+        .button--small {
+            font-size: 0.8rem;
+        }
+
+        .button--large {
+            font-size: 1.2rem;
+        }
+
+        /* 9-6 按钮模块和修饰符 */
+
+        /* 9-8 包含子元素的媒体模块 */
+        .media {
+            padding: 1.5em;
+            background-color: #eee;
+            border-radius: 0.5em;
+        }
+
+        /* 清除浮动 */
+        .midea::after {
+            display: block;
+            content: " ";
+            clear: both;
+        }
+
+        .media__image {
+            float: left;
+            margin-right: 1.5em;
+        }
+
+        .media__body {
+            overflow: auto;
+            margin-top: 0;
+        }
+
+        .media__body>h4 {
+            margin-top: 0;
+        }
+
+        /* 9-8 包含子元素的媒体模块 */
+
+        /* 9-10 为媒体模块定义一个右浮动变体 */
+        .media--right>.media__image {
+            float: right;
+        }
+
+        /* 9-10 为媒体模块定义一个右浮动变体 */
+    </style>
+</head>
+
+<body>
+    <!-- 9-2 为消息模块添加标记 -->
+    <div class="message">
+        Save successful
+    </div>
+    <!-- 9-2 为消息模块添加标记 -->
+
+    <!-- 9-5 使用错误修饰符的消息模块 -->
+    <div class="message message--error">
+        Invalid password
+    </div>
+    <!-- 9-5 使用错误修饰符的消息模块 -->
+
+    <!-- 9-7 使用修饰符创建多种类型的按钮 -->
+    <button class="button button--large">Read More</button>
+    <button class="button button--success">Save</button>
+    <button class="button button--danger button-small">Cancel</button>
+    <!-- 9-7 使用修饰符创建多种类型的按钮 -->
+
+    <!-- 9-9 媒体模块的标记 -->
+    <div class="media">
+        <img class="media__image" src="runner.png" alt="runner iamage">
+        <div class="media__body">
+            <h4>Strength</h4>
+            <p>
+                Strength training is an important part of injury prevention. Focus on your core&mdash; especially your
+                abs and glutes.
+            </p>
+        </div>
+    </div>
+    <!-- 9-9 媒体模块的标记 -->
+    <div class="media media--right" style="margin-top: 1em;">
+        <img class="media__image" src="runner.png" alt="runner iamage">
+        <div class="media__body">
+            <h4>Strength</h4>
+            <p>
+                Strength training is an important part of injury prevention. Focus on your core&mdash; especially your
+                abs and glutes.
+            </p>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
