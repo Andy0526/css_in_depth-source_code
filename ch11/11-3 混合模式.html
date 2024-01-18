@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 11-13 混合两张图片背景 */
+        /* .blend {
+            min-height: 400px;
+            background-image: url(images/bear.jpg), url(images/bear.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: -30vh, 30vw;
+            background-blend-mode: multiply;
+        } */
+
+        /* 11-13 混合两张图片背景 */
+
+        /* 11-14 将背景颜色的色相混合到背景图片上 */
+        /* .blend {
+            min-height: 400px;
+            background-image: url("images/bear.jpg");
+            background-color: #148;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-blend-mode: luminosity;
+        } */
+
+        /* 11-14 将背景颜色的色相混合到背景图片上 */
+        /* 11-15 使用 soft-light 混合模式为图片添加纹理 */
+        /* .blend {
+            min-height: 400px;
+            background-image: url("images/scratches.png"), url("images/bear.jpg");
+            background-size: 200px, cover;
+            background-repeat: repeat, no-repeat;
+            background-position: center center;
+            background-blend-mode: soft-light;
+        } */
+
+        /* 11-15 使用 soft-light 混合模式为图片添加纹理 */
+        /* 11-17 使用融合混合模式来混合多个元素 */
+        .blend {
+            background-image: url(images/bear.jpg);
+            background-size: cover;
+            background-position: center;
+            padding: 5em 0 10em;
+        }
+
+        .blend>h1 {
+            margin: 0;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 6rem;
+            text-align: center;
+            mix-blend-mode: hard-light;
+            background-color: #c33;
+            color: #808080;
+            border: 0.1em solid #ccc;
+            border-width: 0.1em 0;
+        }
+
+        /* 11-17 使用融合混合模式来混合多个元素 */
+    </style>
+</head>
+
+<body>
+    <!-- 11-12 混合背景的 div -->
+    <!-- <div class="blend"></div> -->
+    <!-- 11-12 混合背景的 div -->
+    <!-- 11-16 添加标题到容器中 -->
+    <div class="blend">
+        <h1>Ursa Major</h1>
+    </div>
+    <!-- 11-16 添加标题到容器中 -->
+</body>
+
+</html>
