@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1080px;
+            margin: 0 auto;
+            line-height: 2;
+            color: white;
+            background-color: green;
+        }
+
+        .nav>h2 {
+            padding: 0.25em 0.5em;
+            margin: 0;
+            background-color: yellowgreen;
+        }
+
+        .nav>ul {
+            display: flex;
+            list-style: none;
+            padding: 0.25em 0.5em;
+            margin: 0;
+        }
+
+        .nav>ul>li+li {
+            margin-left: 0.625em;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <h2>左青龙</h2>
+        <ul>
+            <li>AAAA</li>
+            <li>AAAA</li>
+            <li>AAAA</li>
+            <li>AAAA</li>
+        </ul>
+    </nav>
+
+</html>
