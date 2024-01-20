@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        *,
+        ::before,
+        ::after {
+            box-sizing: inherit;
+        }
+
+        body {
+            background-color: hsl(210, 80%, 20%);
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .card {
+            padding: 0.5em;
+            margin: 0 auto;
+            background-color: white;
+            max-width: 300px;
+            /* 向右倾斜15度 */
+            transform: rotate(15deg);
+            /* 向左倾斜15度 */
+            transform: rotate(-15deg);
+            /* 卡片向左倾斜 20 度 */
+            transform: skew(20deg);
+            /* 卡片缩小0.5倍 */
+            transform: scale(0.5);
+            /* 卡片放大2倍 */
+            transform: scale(1.5);
+            /* 元素向右移动20px、向下移动40px */
+            transform: translate(20px, 40px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <img src="images/chicken1.jpg" alt="a chicken">
+        <h4>Mrs. Featherstone</h4>
+        <p>She may be a bit frumpy, but Mrs Featherstone gets the job done. She lays her largish cream-colored eggs on a
+            daily basis. She is gregarious to a fault.</p>
+        <p>This Austra White is our most prolific producer.</p>
+    </div>
+</body>
+
+</html>
