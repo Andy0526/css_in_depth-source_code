@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>两列布局</title>
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+        }
+
+        body {
+            background-color: #eee;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            color: #fff;
+            background-color: #0072b0;
+            border-radius: 0.5em;
+            padding: 0.1em 0;
+            margin-bottom: 1em;
+        }
+
+        /* 消除 border-spacing 作用域表格边缘 的副作用 */
+        .wrapper {
+            margin-left: -1em;
+            margin-right: -1em;
+        }
+
+        .container {
+            display: table;
+            /* 默认情况下，显示为 table 的元素宽度不会扩展到 100% */
+            width: 100%;
+            /* 调试使用 */
+            /* background-color: #e5e0e0; */
+            border-spacing: 1em 0;
+        }
+
+        .main {
+            display: table-cell;
+            width: 70%;
+            background-color: #fff;
+            border-radius: 0.5em;
+        }
+
+        .sidebar {
+            display: table-cell;
+            width: 30%;
+            margin-left: 1.5em;
+            padding-left: 1.5em;
+            background-color: #fff;
+            border-radius: 0.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Franklin Running Club</h1>
+    </header>
+    <div class="wrapper">
+        <div class="container">
+            <main class="main">
+                <h2>Come join us!</h2>
+                <p>
+                    The Franklin Running club meets at 6:00pm every Thursday at the town square. Runs are three to five
+                    miles, at your own pace.
+                </p>
+            </main>
+            <aside class="sidebar">
+                <div class="widget">follow us on twitter</div>
+                <div class="widget">like us on facebook</div>
+                <a href="">become a sponsor</a>
+            </aside>
+        </div>
+    </div>
+</body>
+
+</html>

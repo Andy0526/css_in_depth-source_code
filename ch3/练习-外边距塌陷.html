@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            margin: 0;
+        }
+
+        /*
+        触发外边距折叠需要符合下面条件：
+        1. 都是普通流中的元素且属于同一个 BFC
+        2. 没有被 padding、border、clear 或非空内容隔开
+        3. 两个或两个以上垂直方向的「相邻元素」
+
+        注意这里的「相邻元素」可能是兄弟节点也可能是父子节点，比如：
+        1. 一个元素的 margin-top 和它的第一个普通流子元素的 margin-top；
+        2. 一个元素的 margin-bottom 和它下一个普通流兄弟的 margin-top；
+        3. 一个高度为 auto 元素的 margin-bottom 和它的最后一个子元素的 margin-bottom
+        */
+        .parent {
+            background-color: lightblue;
+            /* 清楚嵌套元素间的外边距折叠的方式：使用父元素创建新的BFC */
+            overflow: auto;
+            /* border: 1px solid #fff; */
+            /* padding: 1em 0; */
+        }
+
+        .child {
+            background-color: lightpink;
+            margin-top: 1em;
+            margin-bottom: 2em;
+        }
+
+        .container {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child">
+            <span>这是child下的内容</span>
+        </div>
+    </div>
+    <div class="container">
+        <span>这是 container 下的第一个盒模块</span>
+    </div>
+</body>
+
+</html>
