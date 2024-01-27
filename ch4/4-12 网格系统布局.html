@@ -106,13 +106,17 @@
         }
 
         .media {
+            /* 借助flexbox 实现媒体布局，且让图片居中展示 */
+            display: flex;
             padding: 1.5em;
             background-color: #eee;
             border-radius: 0.5em;
         }
 
         .media-image {
-            float: left;
+            /* float: left; */
+            /* 图片居中展示 */
+            align-self: center;
             margin-right: 1.5em;
         }
 
@@ -149,7 +153,7 @@
             <div class="row">
                 <div class="column-6">
                     <div class="media">
-                        <img class="media-image" src="./images/runner.png" width="80">
+                        <img class="media-image" src="./images/runner.png">
                         <div class="media-body">
                             <h4>Strength</h4>
                             <p>
@@ -163,7 +167,7 @@
 
                 <div class="column-6">
                     <div class="media">
-                        <img class="media-image" src="./images/shoes.png" width="80">
+                        <img class="media-image" src="./images/shoes.png">
                         <div class="media-body">
                             <h4>Cadence</h4>
                             <p>
@@ -179,7 +183,7 @@
             <div class="row">
                 <div class="column-6">
                     <div class="media">
-                        <img class="media-image" src="./images/shoes.png" width="80">
+                        <img class="media-image" src="./images/shoes.png">
                         <div class="media-body">
                             <h4>Change it up</h4>
                             <p>
@@ -193,7 +197,7 @@
 
                 <div class="column-6">
                     <div class="media">
-                        <img class="media-image" src="./images/runner.png" width="80">
+                        <img class="media-image" src="./images/runner.png">
                         <div class="media-body">
                             <h4>Focus on form</h4>
                             <p>
